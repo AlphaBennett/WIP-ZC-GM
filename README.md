@@ -1,67 +1,92 @@
-# Zombicide Project
+# Zombicide GM System (WIP)
 
-Repository scaffold for maintaining a durable, version-controlled working set for ChatGPT-assisted Zombicide extraction, verification, and bundle generation.
+Repository: https://github.com/AlphaBennett/WIP-ZC-GM
 
 ## Purpose
+This repository is the single source of truth for the Zombicide Game Master system.
 
-This repo is meant to become the persistent source of truth for:
+It contains:
+- Structured mission and map data
+- Extraction and verification workflows
+- Helper tooling and prompts
+- Iterative refinements to process and outputs
 
-- master operating instructions
-- extraction and verification workflow
-- mission / tile / map data
-- helper scripts and utilities
-- changelog and task tracking
+All substantial work performed in ChatGPT should resolve into updates for this repository.
 
-## Recommended workflow
+---
 
-1. Keep `prompts/master-instructions.md` as the primary behavioral guide.
-2. Keep `prompts/session-state.md` updated with current progress, assumptions, and next actions.
-3. Store structured outputs under `data/`.
-4. Store repeatable utilities under `tools/helpers/`.
-5. Record important process changes in `changelog/CHANGELOG.md`.
+## Core Principles
 
-## Current state
+1. **Repository is authoritative**
+   - This repo is the canonical working location
+   - External bundles are delivery mechanisms, not the final source of truth
 
-This scaffold is designed around an iterative Zombicide map / mission extraction workflow, including exact verification when possible and best-effort estimated geometry when exact verification is not possible.
+2. **Deterministic structure**
+   - Data should be organized, modular, and reusable
+   - Prefer structured files over ad hoc notes
 
-## Folder layout
+3. **Verification-aware data**
+   - Extracted or inferred data must distinguish between:
+     - `verified`
+     - `unverified (best-effort)`
 
-```text
-zombicide-project/
-  README.md
-  docs/
-    workflow.md
-    extraction-method.md
-    verification-rules.md
-    repo-conventions.md
-  data/
-    maps/
-      README.md
-    missions/
-      README.md
-    tiles/
-      README.md
-  tools/
-    helpers/
-      README.md
-  prompts/
-    master-instructions.md
-    session-state.md
-  changelog/
-    CHANGELOG.md
-```
+4. **Continuous refinement**
+   - Workflows, prompts, and helper methods should improve over time
+   - Process updates should be captured in `/docs` and `/prompts`
 
-## Git setup suggestion
+5. **Modified-files-only delivery**
+   - ChatGPT update bundles should include only files that changed
+   - Changed files should be delivered as full file replacements
 
-```bash
-git init
-git add .
-git commit -m "Initial Zombicide project scaffold"
-```
+---
 
-## Suggested next commits
+## Standard ChatGPT Update Workflow
 
-1. Add current cumulative master bundle content into `prompts/` and `docs/`.
-2. Add extracted mission artifacts under `data/missions/`.
-3. Add map / tile geometry outputs under `data/maps/` and `data/tiles/`.
-4. Add helper utilities under `tools/helpers/`.
+1. Extract, interpret, or refine data
+2. Validate where possible
+3. Mark uncertainty clearly where exact verification is not possible
+4. Integrate changes into the repo structure
+5. Deliver a modified-files-only update bundle
+6. Commit and push to the repository
+
+---
+
+## Update Bundle Standard
+
+Each ChatGPT repo update should include:
+
+- A concise list of modified files
+- Full replacement contents for each changed file
+- A suggested commit message
+- The required git commands:
+  - `git add`
+  - `git commit`
+  - `git push`
+
+Unchanged files should not be resent unless explicitly requested.
+
+---
+
+## Current Focus
+
+- A47 map extraction and zone-level geometry
+- Improving high-resolution interpretation workflow
+- Reducing ambiguity in tile interpretation
+- Standardizing helper tooling and repo conventions
+
+---
+
+## Folder Overview
+
+- `/docs` → methodology, rules, and repo conventions
+- `/data` → extracted structured content
+- `/tools` → scripts and helpers
+- `/prompts` → ChatGPT instruction/state files
+- `/changelog` → change history
+
+---
+
+## Status
+
+Work in progress.  
+Primary development occurs through ChatGPT-assisted iteration, with this repository serving as the canonical destination for accepted changes.

@@ -1,30 +1,35 @@
 # Session State
 
-## Current repo purpose
+## Active Repository
+https://github.com/AlphaBennett/WIP-ZC-GM
 
-Provide a persistent home for the evolving cumulative Zombicide workflow and extracted assets.
+## Repository Role
+This repository is the canonical source of truth for the Zombicide GM workflow and outputs.
 
-## Current known workflow priorities
+## Current Focus
+- A47 zone-level geometry extraction
+- Improving high-resolution interpretation workflow
+- Standardizing handling of unverified approximation
+- Keeping repo instructions aligned with actual working preferences
 
-1. Maintain the cumulative master bundle logic in modular repo form.
-2. Preserve optimizations discovered during A47 processing and related extraction work.
-3. Support exact zone-level geometry when source quality allows.
-4. When exact verification is not possible, permit best-effort guessing but mark it clearly as unverified.
-5. Keep instructions synchronized with discovered improvements.
+## Update Delivery Preferences
+- Deliver repo changes as modified-files-only bundles
+- Use full file replacement for any changed file
+- Include git add, commit, and push commands in every bundle
+- Do not resend unchanged files unless explicitly requested
 
-## Current assumptions
+## Working Rules
+- If exact verification is not possible:
+  - use best-effort estimation
+  - mark clearly as `unverified (best-effort)`
 
-- Higher-resolution renders are preferred whenever available.
-- Prior successful solutions should be compared against the current path before replacement.
-- Partial progress is preferable to losing structure or delaying integration.
+- Prefer:
+  - consistency over perfection
+  - structured output over raw notes
+  - modular repo updates over one-off bundles
 
-## Immediate next tasks
-
-- import current cumulative master bundle content into repo structure
-- add current A47-related outputs and notes
-- add any helper scripts developed during extraction work
-- establish schema templates for missions / maps / tiles
-
-## Notes
-
-This file should be updated frequently as the working state changes.
+## Near-Term Next Actions
+1. Continue A47 reconstruction
+2. Refine extraction helper accuracy
+3. Validate geometry alignment where possible
+4. Expand standardized structure for future missions after A47 stabilizes
