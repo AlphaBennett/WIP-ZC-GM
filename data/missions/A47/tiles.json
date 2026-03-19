@@ -1,0 +1,12 @@
+{
+  "mission_id": "A47",
+  "status": "in_progress",
+  "schema_version": 1,
+  "description": "Tile placement and alignment working file for A47.",
+  "tiles": [],
+  "alignment_notes": [],
+  "notes": [
+    "Record tile IDs, rotation, relative placement, and confidence.",
+    "Use best-effort approximation when exact verification is not possible."
+  ]
+}

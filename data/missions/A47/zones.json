@@ -1,0 +1,17 @@
+{
+  "mission_id": "A47",
+  "status": "in_progress",
+  "confidence_standard": [
+    "verified",
+    "unverified (best-effort)"
+  ],
+  "schema_version": 1,
+  "description": "Zone-level geometry working file for A47.",
+  "zones": [],
+  "relationships": [],
+  "notes": [
+    "Use this file for canonical A47 zone geometry data.",
+    "Prefer stable identifiers and incremental refinement over reformatting.",
+    "Label any estimated geometry as 'unverified (best-effort)'."
+  ]
+}
